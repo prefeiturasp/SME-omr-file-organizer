@@ -1,0 +1,24 @@
+{
+  "name": "file-organizer",
+  "version": "2.5.0",
+  "description": "organizador de arquivos com processamento de qrCode para imagens",
+  "main": "./src/App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.mstech.com.br:mstech-omr/file-organizer.git"
+  },
+  "dependencies": {
+    "async": "^1.5.0",
+    "extend": "^3.0.0",
+    "gm": "^1.21.1",
+    "mongoose": "^4.6.0",
+    "recursive-readdir": "2.0.0",
+    "winston": "^2.2.0",
+    "winston-mongodb": "^1.6.1"
+  },
+  "author": "andre.machado@mstech.com.br",
+  "license": "SEE LICENSE IN README"
+}
