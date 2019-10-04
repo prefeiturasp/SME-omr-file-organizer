@@ -146,7 +146,14 @@ class FileOrganizer {
 
                             let extName = path.extname(file.name);
                             let baseName = path.basename(file.name, extName);
-                            let imageProcessor = new ImageProcessor(path.normalize(examsBasePath + "\\" + baseName + "." + Enumerator.FileExtensions.PNG), logger);
+
+                            let extension = Enumerator.FileExtensions.PNG;
+                            if (extName.replace('.','') === Enumerator.FileExtensions.JPG)
+                                extension = Enumerator.FileExtensions.JPG;
+                            else if (extName.replace('.','') === Enumerator.FileExtensions.JPEG)
+                                extension = Enumerator.FileExtensions.JPEG;
+
+                            let imageProcessor = new ImageProcessor(path.normalize(examsBasePath + "\\" + baseName + "." + extension), logger);
                             imageProcessor.startProcessingQrCode(Handler);
 
                         }.bind(this)
